@@ -1,17 +1,20 @@
-# Arte & Pintura — produção no VPS Hostinger (Docker + Traefik)
+# Arte & Pintura — produção no VPS Hostinger srv1496407 (Docker + Traefik)
 # Imagem: clebertsfigueiredo/arte-e-pintura:latest
-# Domínio: arteepinturapetrolina.com.br → A para o IP do VPS
+# Domínio: arteepinturapetrolina.com.br → A para 187.77.241.92
 
 services:
   web:
     image: clebertsfigueiredo/arte-e-pintura:latest
+    pull_policy: always
     container_name: arte-e-pintura
     restart: unless-stopped
     expose:
       - "80"
     labels:
-      - traefik.enable=true
-      - traefik.http.routers.artepintura.rule=Host(`arteepinturapetrolina.com.br`) || Host(`www.arteepinturapetrolina.com.br`)
-      - traefik.http.routers.artepintura.entrypoints=websecure
-      - traefik.http.routers.artepintura.tls.certresolver=letsencrypt
-      - traefik.http.services.artepintura.loadbalancer.server.port=80
+      - "traefik.enable=true"
+      - "traefik.http.routers.artepintura.rule=Host(`arteepinturapetrolina.com.br`) || Host(`www.arteepinturapetrolina.com.br`)"
+      - "traefik.http.routers.artepintura.entrypoints=websecure"
+      - "traefik.http.routers.artepintura.tls=true"
+      - "traefik.http.routers.artepintura.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.artepintura.service=artepintura"
+      - "traefik.http.services.artepintura.loadbalancer.server.port=80"
