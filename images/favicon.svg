@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Arte & Pintura">
+  <rect width="64" height="64" rx="12" fill="#1B3A4B"/>
+  <path fill="#C45C26" d="M18 48 L28 18 H40 L42 24 H34 L26 48 Z"/>
+  <rect x="28" y="12" width="22" height="10" rx="2" fill="#C45C26"/>
+  <path fill="#C45C26" d="M38 44 Q48 40 54 28" stroke="#C45C26" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path fill="#C45C26" d="M36 50 Q48 46 56 34" stroke="#C45C26" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>

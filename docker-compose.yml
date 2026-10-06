@@ -1,0 +1,12 @@
+# Arte & Pintura — site estático
+# Uso local:  docker compose up -d --build
+# Hostinger Docker: aponte o domínio arteepinturapetrolina.com.br a este serviço (porta 80)
+
+services:
+  web:
+    build: .
+    image: arte-pintura:latest
+    container_name: arte-pintura
+    ports:
+      - "8080:80"
+    restart: unless-stopped
