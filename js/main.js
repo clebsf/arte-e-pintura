@@ -4,6 +4,11 @@
  * Default: FormSubmit.co (static-friendly) → email to Clebert.
  * First real submit: FormSubmit sends a confirmation link to that inbox — click once.
  * Optional: set FORMSPREE_ENDPOINT to use Formspree instead.
+ *
+ * LP forms may set:
+ *   data-subject="Lead LP Natal"
+ *   data-next="/obrigado.html"
+ *   data-campaign="natal"
  */
 (function () {
   "use strict";
@@ -72,10 +77,8 @@
       var start = input.selectionStart;
       var before = input.value;
       input.value = maskBrazilPhone(input.value);
-      // Keep cursor near end while typing (simple, reliable for masks)
       if (document.activeElement === input) {
         var pos = input.value.length;
-        // If user deleted, try not to jump wildly
         if (before.length > input.value.length && start != null) {
           pos = Math.min(start, input.value.length);
         }
@@ -101,6 +104,9 @@
       var resumo = ((form.querySelector('[name="resumo"]') || {}).value || "").trim();
       var statusEl = form.querySelector(".form-status");
       var btn = form.querySelector('[type="submit"]');
+      var customSubject = form.getAttribute("data-subject");
+      var nextUrl = form.getAttribute("data-next") || "/obrigado.html";
+      var campaign = form.getAttribute("data-campaign") || "";
 
       if (telefoneInput) {
         telefoneInput.value = maskBrazilPhone(telefone);
@@ -126,20 +132,27 @@
       if (btn) btn.disabled = true;
       showStatus(statusEl, "Enviando…", false);
 
+      var subject =
+        customSubject ||
+        "Orçamento Arte & Pintura — " + nome + " (" + cidade + ")";
+
+      var payload = {
+        nome: nome,
+        telefone: telefone,
+        cidade: cidade,
+        resumo: resumo,
+        _subject: subject,
+        _template: "table",
+      };
+      if (campaign) payload.campanha = campaign;
+
       fetch(endpoint, {
         method: "POST",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          nome: nome,
-          telefone: telefone,
-          cidade: cidade,
-          resumo: resumo,
-          _subject: "Orçamento Arte & Pintura — " + nome + " (" + cidade + ")",
-          _template: "table",
-        }),
+        body: JSON.stringify(payload),
       })
         .then(function (res) {
           return res.json().then(function (data) {
@@ -148,7 +161,7 @@
           });
         })
         .then(function () {
-          window.location.href = "obrigado.html";
+          window.location.href = nextUrl;
         })
         .catch(function () {
           showStatus(

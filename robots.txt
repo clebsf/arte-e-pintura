@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /lp/
 
 Sitemap: https://arteepinturapetrolina.com.br/sitemap.xml

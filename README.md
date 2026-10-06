@@ -17,7 +17,11 @@ arte-pintura/
 ├── sobre.html
 ├── contato.html
 ├── obrigado.html
+├── lp/natal/           # LP campanha Natal (noindex)
+├── lp/fachada/         # LP fachada / sol (noindex)
+├── lp/empresa/         # LP comercial B2B (noindex)
 ├── css/styles.css
+├── css/lp.css
 ├── js/main.js
 ├── images/logo.jpg     # Logo oficial (opção A)
 ├── images/favicon.svg
@@ -75,6 +79,18 @@ ports:
   - "80:80"
 ```
 
+## Landing pages (campanhas)
+
+Paths no domínio apex (sem subdomínio `lp.`). Páginas com `noindex,nofollow` — não entram no `sitemap.xml`.
+
+| URL | Campanha |
+|-----|----------|
+| `/lp/natal/` | Natal / interiores |
+| `/lp/fachada/` | Fachada / sol |
+| `/lp/empresa/` | Comercial / B2B |
+
+Header mínimo (logo + link Site). Formulário igual ao do site (FormSubmit).
+
 ## Formulário de orçamento (e-mail)
 
 Por padrão o site envia o lead via [FormSubmit](https://formsubmit.co) para `clebertsfigueiredo@gmail.com` (sem backend) e redireciona para `obrigado.html`.
@@ -123,7 +139,7 @@ docker pull clebertsfigueiredo/arte-e-pintura:latest
 docker run -d --name arte-pintura -p 80:80 --restart unless-stopped clebertsfigueiredo/arte-e-pintura:latest
 ```
 
-Tags: `latest`, `1.0.0`  
+Tags: `latest`, `1.1.0`  
 Hub: https://hub.docker.com/r/clebertsfigueiredo/arte-e-pintura
 
 Repositório: https://github.com/clebsf/arte-e-pintura
