@@ -6,99 +6,440 @@
   <title>Pintura de interiores até o Natal em Petrolina e Juazeiro | Arte & Pintura</title>
   <meta name="description" content="Receba o Natal com a casa renovada. Pintura de interiores com prazo combinado em Petrolina e Juazeiro. Orçamento sem compromisso.">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="theme-color" content="#3d2a28">
+  <meta name="theme-color" content="#12283A">
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/styles.css?v=4">
-  <link rel="stylesheet" href="../../css/lp.css?v=1">
   <meta property="og:title" content="Receba o Natal com a casa renovada | Arte & Pintura">
   <meta property="og:description" content="Pintura de interiores com prazo combinado até o Natal — Petrolina e Juazeiro.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://arteepinturapetrolina.com.br/lp/natal/">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:image" content="https://arteepinturapetrolina.com.br/images/logo.jpg">
-  <!-- Google Analytics: descomente e troque G-XXXXXXXXXX pelo ID real
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
--->
+  <meta property="og:image" content="https://arteepinturapetrolina.com.br/images/lp/natal/hero.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            petrol: { DEFAULT: '#1B3A4B', deep: '#12283A', soft: '#2A5065' },
+            terra: { DEFAULT: '#C45C26', deep: '#A84B1C', soft: '#E8A27A' },
+            cream: { DEFAULT: '#F7F5F2', warm: '#EFE7DC' },
+            charcoal: '#2C2C2C',
+            gold: { DEFAULT: '#C9A35B', soft: '#E6CF9E' },
+          },
+          fontFamily: {
+            display: ['"Fraunces"', 'Georgia', 'serif'],
+            sans: ['"Manrope"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Manrope, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    .faq-panel { display: none; }
+    .faq-panel.is-open { display: block; }
+    .floating-cta { display: none; }
+    .floating-cta.is-visible { display: block; }
+  
+    .form-status { display: none; margin-top: 0.75rem; font-size: 0.9rem; }
+    .form-status.is-visible { display: block; }
+    .form-status.is-error { color: #a33; }
+    .form-status.is-ok { color: #1a6b3c; }
+  </style>
 </head>
-<body class="lp lp-natal">
-  <header class="lp-header">
-    <div class="container lp-header-inner">
-      <a class="logo-link" href="/" aria-label="Arte & Pintura — início">
-        <img src="../../images/logo.jpg" alt="Arte & Pintura" width="220" height="48">
+<body class="min-h-screen w-full bg-cream font-sans text-charcoal">
+  <header class="absolute inset-x-0 top-0 z-30">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
+      <a href="/" class="font-display text-[22px] font-medium tracking-tight text-cream" aria-label="Arte & Pintura — início">
+        Arte <span class="italic text-gold">&amp;</span> Pintura
       </a>
-      <a class="lp-site-link" href="/">Site</a>
+      <a href="/" class="group inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold text-cream/90 transition-colors hover:text-cream focus:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+        Site
+        <svg class="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
     </div>
   </header>
 
-  <section class="lp-hero">
-    <div class="container">
-      <span class="lp-badge">Campanha Natal</span>
-      <h1>Receba o Natal com a casa renovada</h1>
-      <p class="lead">Pintura de interiores com acabamento limpo e prazo combinado — em Petrolina e Juazeiro.</p>
-      <a class="btn btn-primary" href="#orcamento">Pedir orçamento para o Natal</a>
-    </div>
-  </section>
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="relative isolate overflow-hidden bg-petrol-deep">
+      <img src="../../images/lp/natal/hero.jpg" alt="Sala recém-pintada com parede azul petróleo e árvore de Natal iluminada" class="absolute inset-0 -z-20 h-full w-full object-cover object-[72%_center]">
+      <div class="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(18,40,58,0.88)_0%,rgba(18,40,58,0.72)_40%,rgba(18,40,58,0.94)_100%)] lg:bg-[linear-gradient(90deg,rgba(18,40,58,0.94)_0%,rgba(18,40,58,0.78)_42%,rgba(18,40,58,0.25)_78%,rgba(18,40,58,0.45)_100%)]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -bottom-56 -left-40 -z-10 h-[620px] w-[900px] bg-[radial-gradient(closest-side,rgba(196,92,38,0.42),rgba(196,92,38,0))]" aria-hidden="true"></div>
 
-  <main class="lp-main">
-    <div class="container lp-grid">
-      <div class="lp-copy-panel">
-        <ul class="lp-bullets">
-          <li>Sala e quartos prontos pra visitas</li>
-          <li>Prazo alinhado ao seu calendário de dezembro</li>
-          <li>Orçamento sem compromisso</li>
-          <li>Empresa de Petrolina (CNPJ 22.426.463/0001-52)</li>
-        </ul>
-        <p class="lp-trust"><strong>Atendimento Petrolina/PE e Juazeiro/BA</strong> — combine o prazo e receba a família com a casa em ordem.</p>
+      <div class="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-5 pb-16 pt-28 sm:px-8 lg:min-h-[100svh] lg:grid-cols-12 lg:items-center lg:gap-8 lg:pb-20 lg:pt-28">
+        <div class="lg:col-span-7">
+          <p class="flex items-center gap-3 text-sm font-medium text-gold-soft">
+            <span class="h-px w-8 bg-gold" aria-hidden="true"></span>
+            Petrolina/PE e Juazeiro/BA
+          </p>
+          <h1 class="mt-6 font-display text-[46px] font-normal leading-[1.02] tracking-[-0.02em] text-cream sm:text-6xl lg:text-[82px] lg:leading-[0.98]">
+            Receba o
+            <span class="relative inline-block italic text-gold-soft">
+              Natal
+              <svg viewBox="0 0 320 60" fill="none" preserveAspectRatio="none" class="absolute -bottom-3 left-[-6%] h-5 w-[112%] sm:-bottom-4 sm:h-7" aria-hidden="true">
+                <path d="M4 38 C 60 52, 120 50, 168 36 C 196 28, 214 14, 200 8 C 186 3, 176 24, 196 34 C 230 50, 280 46, 316 26" stroke="#C9A35B" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <br class="hidden sm:block"> com a casa renovada
+          </h1>
+          <p class="mt-8 max-w-xl text-lg leading-relaxed text-cream/80 sm:text-xl">
+            Pintura de interiores com acabamento limpo e prazo combinado — em Petrolina e Juazeiro.
+          </p>
+          <ul class="mt-8 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
+            <li class="flex items-start gap-3 text-[15px] leading-snug text-cream/90">
+              <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-gold/60">
+                <svg class="h-3 w-3 text-gold-soft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Sala e quartos prontos pra visitas
+            </li>
+            <li class="flex items-start gap-3 text-[15px] leading-snug text-cream/90">
+              <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-gold/60">
+                <svg class="h-3 w-3 text-gold-soft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Prazo alinhado ao calendário de dezembro
+            </li>
+            <li class="flex items-start gap-3 text-[15px] leading-snug text-cream/90">
+              <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-gold/60">
+                <svg class="h-3 w-3 text-gold-soft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Orçamento sem compromisso
+            </li>
+            <li class="flex items-start gap-3 text-[15px] leading-snug text-cream/90">
+              <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-gold/60">
+                <svg class="h-3 w-3 text-gold-soft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Empresa de Petrolina (CNPJ 22.426.463/0001-52)
+            </li>
+          </ul>
+          <div class="mt-10">
+            <a href="#orcamento" class="group inline-flex h-14 items-center gap-2 rounded-xl bg-terra px-6 text-[15px] font-semibold text-white transition-[background-color,transform] hover:bg-terra-deep active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-petrol-deep">
+              Pedir orçamento para o Natal
+              <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 lg:col-start-8 lg:pl-4">
+          <div id="orcamento" class="relative w-full scroll-mt-24 rounded-[22px] bg-cream p-6 text-charcoal shadow-[0_30px_80px_-20px_rgba(10,25,35,0.55)] ring-1 ring-black/5 sm:p-8">
+            <form data-lead-form
+                  data-subject="Lead LP Natal — Arte &amp; Pintura"
+                  data-campaign="natal"
+                  data-next="/obrigado.html"
+                  action="https://formsubmit.co/clebertsfigueiredo@gmail.com"
+                  method="POST"
+                  novalidate
+                  aria-labelledby="quote-title">
+              <div class="flex items-baseline justify-between gap-4">
+                <h2 id="quote-title" class="font-display text-[28px] leading-tight text-petrol">Orçamento de Natal</h2>
+                <span class="whitespace-nowrap text-xs font-medium text-charcoal/55">Leva 1 minuto</span>
+              </div>
+              <p class="mt-1.5 text-sm text-charcoal/65">Retornamos por telefone para combinar a visita.</p>
+              <div class="mt-6 space-y-4">
+                <div>
+                  <label for="nome" class="mb-1.5 block text-[13px] font-semibold text-charcoal/80">Nome</label>
+                  <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Seu nome"
+                    class="block h-12 w-full rounded-xl border border-charcoal/15 bg-white px-4 text-[15px] text-charcoal placeholder:text-charcoal/40 focus:border-petrol focus:outline-none focus:ring-4 focus:ring-petrol/10">
+                </div>
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div>
+                    <label for="telefone" class="mb-1.5 block text-[13px] font-semibold text-charcoal/80">Telefone</label>
+                    <input id="telefone" name="telefone" type="tel" autocomplete="tel" required placeholder="(87) 99999-0000"
+                      class="block h-12 w-full rounded-xl border border-charcoal/15 bg-white px-4 text-[15px] text-charcoal placeholder:text-charcoal/40 focus:border-petrol focus:outline-none focus:ring-4 focus:ring-petrol/10">
+                  </div>
+                  <div>
+                    <label for="cidade" class="mb-1.5 block text-[13px] font-semibold text-charcoal/80">Cidade</label>
+                    <select id="cidade" name="cidade" required
+                      class="block h-12 w-full appearance-none rounded-xl border border-charcoal/15 bg-white px-4 pr-10 text-[15px] text-charcoal focus:border-petrol focus:outline-none focus:ring-4 focus:ring-petrol/10">
+                      <option value="Petrolina/PE" selected>Petrolina/PE</option>
+                      <option value="Juazeiro/BA">Juazeiro/BA</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="resumo" class="mb-1.5 block text-[13px] font-semibold text-charcoal/80">Resumo do serviço</label>
+                  <textarea id="resumo" name="resumo" rows="3" required placeholder="Ex.: pintar sala e 2 quartos até meados de dezembro"
+                    class="block w-full resize-none rounded-xl border border-charcoal/15 bg-white px-4 py-3 text-[15px] leading-relaxed text-charcoal placeholder:text-charcoal/40 focus:border-petrol focus:outline-none focus:ring-4 focus:ring-petrol/10"></textarea>
+                </div>
+              </div>
+              <button type="submit" class="group mt-6 flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-terra px-5 text-[15px] font-semibold text-white transition-[background-color,transform] hover:bg-terra-deep active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-terra focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:cursor-wait disabled:opacity-80">
+                Pedir orçamento para o Natal
+                <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+              <p class="mt-3 text-center text-xs text-charcoal/55">Sem compromisso. Seus dados são usados só para este orçamento.</p>
+              <p class="form-status mt-3 text-center text-sm" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <form id="orcamento" class="form-card" data-lead-form
-            data-subject="Lead LP Natal — Arte & Pintura"
-            data-campaign="natal"
-            data-next="/obrigado.html"
-            action="https://formsubmit.co/clebertsfigueiredo@gmail.com"
-            method="POST"
-            novalidate>
-        <h2>Pedir orçamento para o Natal</h2>
-        <p class="form-note">Respondemos por telefone o mais rápido possível.</p>
-        <div class="form-group">
-          <label for="nome">Nome</label>
-          <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Seu nome">
+    <!-- Trust strip -->
+    <section aria-label="Por que confiar" class="border-b border-charcoal/10 bg-cream">
+      <ul class="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-charcoal/10 px-5 sm:grid-cols-2 sm:divide-y-0 sm:px-8 lg:grid-cols-4 lg:divide-x">
+        <li class="flex items-start gap-4 py-6 lg:px-6 lg:first:pl-0">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-terra" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div>
+            <p class="text-[15px] font-semibold text-petrol">CNPJ 22.426.463/0001-52</p>
+            <p class="mt-0.5 text-sm text-charcoal/65">Empresa formalizada em Petrolina</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4 py-6 lg:px-6">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-terra" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <p class="text-[15px] font-semibold text-petrol">Petrolina e Juazeiro</p>
+            <p class="mt-0.5 text-sm text-charcoal/65">Atendimento nas duas margens do São Francisco</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4 py-6 lg:px-6">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-terra" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 16l2 2 4-4"/></svg>
+          <div>
+            <p class="text-[15px] font-semibold text-petrol">Prazo combinado</p>
+            <p class="mt-0.5 text-sm text-charcoal/65">Início e entrega definidos antes de começar</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4 py-6 lg:px-6 lg:last:pr-0">
+          <svg class="mt-0.5 h-5 w-5 shrink-0 text-terra" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+          <div>
+            <p class="text-[15px] font-semibold text-petrol">Orçamento sem compromisso</p>
+            <p class="mt-0.5 text-sm text-charcoal/65">Você decide depois de ver a proposta</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Timeline -->
+    <section aria-labelledby="timeline-title" class="relative overflow-hidden bg-cream py-20 sm:py-28">
+      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_60%_at_100%_0%,rgba(196,92,38,0.14),rgba(196,92,38,0)),radial-gradient(40%_50%_at_0%_100%,rgba(201,163,91,0.14),rgba(201,163,91,0))]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-end">
+          <h2 id="timeline-title" class="font-display text-4xl leading-[1.05] tracking-[-0.015em] text-petrol sm:text-5xl lg:col-span-7 lg:text-[56px]">
+            Dezembro passa rápido. <span class="italic text-terra">Seu calendário até a ceia.</span>
+          </h2>
+          <p class="max-w-md text-base leading-relaxed text-charcoal/70 lg:col-span-4 lg:col-start-9">
+            As datas de dezembro são limitadas. Quanto antes você pedir, mais opções de agenda para a casa ficar pronta antes das visitas.
+          </p>
         </div>
-        <div class="form-group">
-          <label for="telefone">Telefone</label>
-          <input id="telefone" name="telefone" type="tel" autocomplete="tel" required placeholder="(87) 99999-0000">
+        <ol class="relative mt-14 grid grid-cols-1 gap-10 lg:mt-20 lg:grid-cols-4 lg:gap-8">
+          <span class="absolute bottom-2 left-[7px] top-2 w-px bg-gold/50 lg:bottom-auto lg:left-0 lg:right-0 lg:top-[7px] lg:h-px lg:w-auto" aria-hidden="true"></span>
+          <li class="relative pl-10 lg:pl-0 lg:pt-12">
+            <span class="absolute left-0 top-1 h-[15px] w-[15px] rounded-full border-2 border-gold bg-cream lg:top-0" aria-hidden="true"></span>
+            <p class="text-sm font-semibold text-gold">1. Hoje</p>
+            <h3 class="mt-2 font-display text-2xl text-petrol">Peça o orçamento</h3>
+            <p class="mt-2 max-w-xs text-[15px] leading-relaxed text-charcoal/70">Conte no formulário o que precisa pintar. Retornamos por telefone para entender o serviço.</p>
+          </li>
+          <li class="relative pl-10 lg:pl-0 lg:pt-12">
+            <span class="absolute left-0 top-1 h-[15px] w-[15px] rounded-full border-2 border-gold bg-cream lg:top-0" aria-hidden="true"></span>
+            <p class="text-sm font-semibold text-gold">2. Visita</p>
+            <h3 class="mt-2 font-display text-2xl text-petrol">Medição e cores</h3>
+            <p class="mt-2 max-w-xs text-[15px] leading-relaxed text-charcoal/70">Vamos até sua casa, avaliamos as paredes e ajudamos a escolher os tons de cada ambiente.</p>
+          </li>
+          <li class="relative pl-10 lg:pl-0 lg:pt-12">
+            <span class="absolute left-0 top-1 h-[15px] w-[15px] rounded-full border-2 border-gold bg-cream lg:top-0" aria-hidden="true"></span>
+            <p class="text-sm font-semibold text-gold">3. Data fechada</p>
+            <h3 class="mt-2 font-display text-2xl text-petrol">Prazo no papel</h3>
+            <p class="mt-2 max-w-xs text-[15px] leading-relaxed text-charcoal/70">A proposta já sai com início e entrega alinhados ao seu calendário de dezembro.</p>
+          </li>
+          <li class="relative pl-10 lg:pl-0 lg:pt-12">
+            <span class="absolute left-0 top-1 h-[15px] w-[15px] rounded-full border-2 border-terra bg-terra lg:top-0" aria-hidden="true"></span>
+            <p class="text-sm font-semibold text-terra">4. Antes das visitas</p>
+            <h3 class="mt-2 font-display text-2xl text-petrol">Casa pronta</h3>
+            <p class="mt-2 max-w-xs text-[15px] leading-relaxed text-charcoal/70">Sala e quartos pintados, móveis de volta no lugar e ambiente limpo para receber a família.</p>
+          </li>
+        </ol>
+        <div class="mt-14">
+          <a href="#orcamento" class="text-[15px] font-semibold text-terra underline decoration-terra/40 underline-offset-[6px] transition-colors hover:decoration-terra focus:outline-none focus-visible:ring-2 focus-visible:ring-terra">
+            Começar pelo passo 1 — pedir orçamento
+          </a>
         </div>
-        <div class="form-group">
-          <label for="cidade">Cidade</label>
-          <select id="cidade" class="form-select" name="cidade" required>
-            <option value="Petrolina/PE" selected>Petrolina/PE</option>
-            <option value="Juazeiro/BA">Juazeiro/BA</option>
-          </select>
+      </div>
+    </section>
+
+    <!-- Finish showcase -->
+    <section aria-labelledby="finish-title" class="bg-cream-warm py-20 sm:py-28">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-5 sm:px-8 lg:grid-cols-12 lg:items-center lg:gap-8">
+        <div class="relative pb-16 lg:col-span-6 lg:pb-20">
+          <img src="../../images/lp/natal/bedroom.jpg" alt="Quarto de hóspedes recém-pintado em tom terracota claro" class="aspect-[4/5] w-[80%] rounded-[22px] object-cover">
+          <img src="../../images/lp/natal/detail.jpg" alt="Linha reta entre parede clara e parede azul petróleo" class="absolute bottom-0 right-0 aspect-[4/5] w-[46%] rounded-[18px] border-[6px] border-cream-warm object-cover">
         </div>
-        <div class="form-group">
-          <label for="resumo">Resumo do que precisa</label>
-          <textarea id="resumo" name="resumo" required placeholder="Ex.: pintar sala e 2 quartos até meados de dezembro"></textarea>
+        <div class="lg:col-span-5 lg:col-start-8">
+          <h2 id="finish-title" class="font-display text-4xl leading-[1.05] tracking-[-0.015em] text-petrol sm:text-5xl">
+            Acabamento limpo, <span class="italic text-terra">do rodapé ao teto.</span>
+          </h2>
+          <p class="mt-5 text-base leading-relaxed text-charcoal/70 sm:text-lg">
+            Visita chegando não combina com cheiro de obra e pó no sofá. Cuidamos da casa como se fosse nossa — antes, durante e depois da tinta.
+          </p>
+          <dl class="mt-10 divide-y divide-charcoal/10 border-y border-charcoal/10">
+            <div class="grid grid-cols-1 gap-1 py-5 sm:grid-cols-[200px_1fr] sm:gap-6">
+              <dt class="font-semibold text-petrol">Móveis e piso protegidos</dt>
+              <dd class="text-[15px] leading-relaxed text-charcoal/70">Lona e fita em tudo que fica no ambiente durante a pintura.</dd>
+            </div>
+            <div class="grid grid-cols-1 gap-1 py-5 sm:grid-cols-[200px_1fr] sm:gap-6">
+              <dt class="font-semibold text-petrol">Recortes precisos</dt>
+              <dd class="text-[15px] leading-relaxed text-charcoal/70">Linhas limpas entre parede, teto, rodapé e batentes.</dd>
+            </div>
+            <div class="grid grid-cols-1 gap-1 py-5 sm:grid-cols-[200px_1fr] sm:gap-6">
+              <dt class="font-semibold text-petrol">Preparação da parede</dt>
+              <dd class="text-[15px] leading-relaxed text-charcoal/70">Massa e lixa onde a superfície pede, para a tinta assentar por igual.</dd>
+            </div>
+            <div class="grid grid-cols-1 gap-1 py-5 sm:grid-cols-[200px_1fr] sm:gap-6">
+              <dt class="font-semibold text-petrol">Limpeza ao fim de cada dia</dt>
+              <dd class="text-[15px] leading-relaxed text-charcoal/70">Você continua usando a casa enquanto o serviço anda.</dd>
+            </div>
+          </dl>
         </div>
-        <div class="form-actions">
-          <button class="btn btn-primary" type="submit">Pedir orçamento para o Natal</button>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section aria-labelledby="faq-title" class="bg-cream py-20 sm:py-28">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 sm:px-8 lg:grid-cols-12 lg:gap-8">
+        <h2 id="faq-title" class="font-display text-4xl leading-[1.05] tracking-[-0.015em] text-petrol sm:text-5xl lg:col-span-4">
+          Antes de pedir, <span class="italic text-terra">talvez você queira saber.</span>
+        </h2>
+        <div class="border-t border-charcoal/15 lg:col-span-7 lg:col-start-6" id="faq-list">
+          <div class="border-b border-charcoal/15">
+            <h3>
+              <button type="button" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-terra" aria-expanded="true" aria-controls="faq-0" data-faq="0">
+                <span class="text-lg font-semibold text-petrol">Ainda dá tempo de pintar antes do Natal?</span>
+                <svg class="faq-icon h-5 w-5 shrink-0 text-terra transition-transform duration-200 rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </h3>
+            <div id="faq-0" class="faq-panel is-open overflow-hidden" role="region">
+              <p class="max-w-2xl pb-6 text-[15px] leading-relaxed text-charcoal/70">Depende da agenda e do tamanho do serviço. Uma sala costuma levar de 1 a 3 dias, conforme o estado das paredes. Por isso vale pedir o orçamento o quanto antes: as datas de dezembro são limitadas.</p>
+            </div>
+          </div>
+          <div class="border-b border-charcoal/15">
+            <h3>
+              <button type="button" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-terra" aria-expanded="false" aria-controls="faq-1" data-faq="1">
+                <span class="text-lg font-semibold text-petrol">Preciso sair de casa durante a pintura?</span>
+                <svg class="faq-icon h-5 w-5 shrink-0 text-terra transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </h3>
+            <div id="faq-1" class="faq-panel overflow-hidden" role="region" hidden>
+              <p class="max-w-2xl pb-6 text-[15px] leading-relaxed text-charcoal/70">Não. Trabalhamos por ambiente, protegemos móveis e piso e limpamos ao final de cada dia, para a rotina da casa seguir normalmente.</p>
+            </div>
+          </div>
+          <div class="border-b border-charcoal/15">
+            <h3>
+              <button type="button" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-terra" aria-expanded="false" aria-controls="faq-2" data-faq="2">
+                <span class="text-lg font-semibold text-petrol">A tinta está inclusa no orçamento?</span>
+                <svg class="faq-icon h-5 w-5 shrink-0 text-terra transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </h3>
+            <div id="faq-2" class="faq-panel overflow-hidden" role="region" hidden>
+              <p class="max-w-2xl pb-6 text-[15px] leading-relaxed text-charcoal/70">Você escolhe: podemos orçar só a mão de obra ou o serviço completo com material. Na visita indicamos a quantidade e o tipo de tinta para cada parede.</p>
+            </div>
+          </div>
+          <div class="border-b border-charcoal/15">
+            <h3>
+              <button type="button" class="faq-btn flex w-full items-center justify-between gap-6 py-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-terra" aria-expanded="false" aria-controls="faq-3" data-faq="3">
+                <span class="text-lg font-semibold text-petrol">Vocês atendem Juazeiro também?</span>
+                <svg class="faq-icon h-5 w-5 shrink-0 text-terra transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </h3>
+            <div id="faq-3" class="faq-panel overflow-hidden" role="region" hidden>
+              <p class="max-w-2xl pb-6 text-[15px] leading-relaxed text-charcoal/70">Sim. Somos de Petrolina e atendemos as duas cidades, Petrolina/PE e Juazeiro/BA.</p>
+            </div>
+          </div>
         </div>
-        <p class="form-hint">Seu pedido chega por e-mail. Não publicamos WhatsApp nem redes neste site.</p>
-        <p class="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="final-cta" aria-labelledby="final-title" class="relative isolate overflow-hidden bg-petrol py-24 sm:py-32">
+      <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_80%_at_50%_120%,rgba(196,92,38,0.55),rgba(196,92,38,0))]" aria-hidden="true"></div>
+      <div class="mx-auto max-w-4xl px-5 text-center sm:px-8">
+        <h2 id="final-title" class="font-display text-[42px] leading-[1.02] tracking-[-0.02em] text-cream sm:text-6xl lg:text-7xl">
+          Ainda dá tempo de
+          <span class="relative inline-block italic text-gold-soft">
+            receber bem.
+            <svg viewBox="0 0 320 60" fill="none" preserveAspectRatio="none" class="absolute -bottom-3 left-0 h-5 w-full sm:h-6" aria-hidden="true">
+              <path d="M4 38 C 60 52, 120 50, 168 36 C 196 28, 214 14, 200 8 C 186 3, 176 24, 196 34 C 230 50, 280 46, 316 26" stroke="#C9A35B" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </h2>
+        <p class="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-cream/75">
+          Peça seu orçamento agora e garanta uma data em dezembro para pintar sala e quartos.
+        </p>
+        <a href="#orcamento" class="group mt-10 inline-flex h-14 items-center gap-2 rounded-xl bg-terra px-7 text-[15px] font-semibold text-white transition-[background-color,transform] hover:bg-terra-deep active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-petrol">
+          Pedir orçamento para o Natal
+          <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
   </main>
 
-  <footer class="lp-footer">
-    <div class="container">
-      <strong>Arte & Pintura</strong> · CNPJ 22.426.463/0001-52 · Petrolina/PE
+  <footer class="bg-petrol-deep pb-28 pt-12 text-cream/70 lg:pb-12">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 sm:px-8 md:flex-row md:items-center md:justify-between">
+      <div>
+        <span class="font-display text-[22px] font-medium tracking-tight text-cream">Arte <span class="italic text-gold">&amp;</span> Pintura</span>
+        <p class="mt-2 text-sm">Pintura de interiores em Petrolina/PE e Juazeiro/BA</p>
+      </div>
+      <div class="flex flex-col gap-1 text-sm md:items-end">
+        <p>CNPJ 22.426.463/0001-52</p>
+        <a href="/" class="font-semibold text-cream transition-colors hover:text-gold-soft">Visitar o site</a>
+      </div>
     </div>
   </footer>
-  <script src="../../js/main.js?v=3"></script>
+
+  <div id="floating-cta" class="floating-cta fixed inset-x-4 bottom-4 z-40 lg:inset-x-auto lg:bottom-6 lg:right-6">
+    <a href="#orcamento" class="group flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-terra px-6 text-[15px] font-semibold text-white shadow-[0_18px_40px_-12px_rgba(18,40,58,0.6)] transition-[background-color,transform] hover:bg-terra-deep active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol focus-visible:ring-offset-2 lg:w-auto">
+      Pedir orçamento para o Natal
+      <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+  <script src="../../js/main.js?v=4"></script>
+  <script>
+    (function () {
+      var openIdx = 0;
+      document.querySelectorAll('.faq-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var idx = Number(btn.getAttribute('data-faq'));
+          var next = openIdx === idx ? -1 : idx;
+          openIdx = next;
+          document.querySelectorAll('.faq-btn').forEach(function (b) {
+            var i = Number(b.getAttribute('data-faq'));
+            var panel = document.getElementById('faq-' + i);
+            var icon = b.querySelector('.faq-icon');
+            var isOpen = i === next;
+            b.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            if (panel) {
+              panel.classList.toggle('is-open', isOpen);
+              if (isOpen) panel.removeAttribute('hidden');
+              else panel.setAttribute('hidden', '');
+            }
+            if (icon) icon.classList.toggle('rotate-45', isOpen);
+          });
+        });
+      });
+
+      var floatEl = document.getElementById('floating-cta');
+      var hero = document.getElementById('hero');
+      var final = document.getElementById('final-cta');
+      if (floatEl && hero && final && 'IntersectionObserver' in window) {
+        var heroVisible = true;
+        var finalVisible = false;
+        function update() {
+          floatEl.classList.toggle('is-visible', !heroVisible && !finalVisible);
+        }
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.target.id === 'hero') heroVisible = e.isIntersecting;
+            if (e.target.id === 'final-cta') finalVisible = e.isIntersecting;
+          });
+          update();
+        }, { threshold: 0.05 });
+        obs.observe(hero);
+        obs.observe(final);
+      }
+    })();
+  </script>
 </body>
 </html>

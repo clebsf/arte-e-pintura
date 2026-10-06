@@ -100,7 +100,10 @@
       var nome = ((form.querySelector('[name="nome"]') || {}).value || "").trim();
       var telefoneInput = form.querySelector('[name="telefone"]');
       var telefone = ((telefoneInput || {}).value || "").trim();
-      var cidade = ((form.querySelector('[name="cidade"]') || {}).value || "").trim();
+      var cidadeEl =
+        form.querySelector('[name="cidade"]:checked') ||
+        form.querySelector('[name="cidade"]');
+      var cidade = ((cidadeEl || {}).value || "").trim();
       var resumo = ((form.querySelector('[name="resumo"]') || {}).value || "").trim();
       var statusEl = form.querySelector(".form-status");
       var btn = form.querySelector('[type="submit"]');

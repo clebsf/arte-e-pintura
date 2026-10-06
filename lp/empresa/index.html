@@ -4,101 +4,304 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pintura comercial para lojas e empresas em Petrolina e Juazeiro | Arte & Pintura</title>
-  <meta name="description" content="Pintura para lojas, escritórios e galpões em Petrolina e Juazeiro. Acabamento profissional e prazo combinado.">
+  <meta name="description" content="Fachada e ambiente que passam confiança ao cliente. Pintura para lojas, escritórios e galpões em Petrolina e Juazeiro.">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="theme-color" content="#1B3A4B">
+  <meta name="theme-color" content="#122A37">
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/styles.css?v=4">
-  <link rel="stylesheet" href="../../css/lp.css?v=1">
   <meta property="og:title" content="Pintura comercial | Arte & Pintura">
   <meta property="og:description" content="Fachada e ambiente que passam confiança ao cliente — Petrolina e Juazeiro.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://arteepinturapetrolina.com.br/lp/empresa/">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:image" content="https://arteepinturapetrolina.com.br/images/logo.jpg">
-  <!-- Google Analytics: descomente e troque G-XXXXXXXXXX pelo ID real
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
--->
+  <meta property="og:image" content="https://arteepinturapetrolina.com.br/images/lp/empresa/loja.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            petrol: { DEFAULT: '#1B3A4B', deep: '#122A37', line: '#2A4D60', soft: '#8FA9B8' },
+            terracotta: { DEFAULT: '#C45C26', dark: '#A84D1E' },
+            paper: '#F7F5F2',
+            ink: '#2C2C2C',
+          },
+          fontFamily: {
+            sans: ['"Inter Tight"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter Tight', system-ui, sans-serif; background: #122a37; -webkit-font-smoothing: antialiased; }
+    .blueprint-grid {
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.045) 1px, transparent 1px);
+      background-size: 56px 56px;
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  
+    .form-status { display: none; margin-top: 0.75rem; font-size: 0.9rem; }
+    .form-status.is-visible { display: block; }
+    .form-status.is-error { color: #a33; }
+    .form-status.is-ok { color: #1a6b3c; }
+  </style>
 </head>
-<body class="lp lp-empresa">
-  <header class="lp-header">
-    <div class="container lp-header-inner">
-      <a class="logo-link" href="/" aria-label="Arte & Pintura — início">
-        <img src="../../images/logo.jpg" alt="Arte & Pintura" width="220" height="48">
+<body class="min-h-screen w-full bg-petrol-deep font-sans text-white">
+  <header class="absolute inset-x-0 top-0 z-20">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-20 md:px-8">
+      <a href="/" class="flex items-center gap-3" aria-label="Arte & Pintura — início">
+        <span class="flex h-8 w-8 items-center justify-center bg-white font-mono text-[11px] font-medium text-petrol">A&amp;P</span>
+        <span class="text-[15px] font-semibold tracking-tight text-white">Arte &amp; Pintura</span>
       </a>
-      <a class="lp-site-link" href="/">Site</a>
+      <a href="/" class="border border-white/25 px-4 py-2 text-sm font-medium text-white transition-colors hover:border-white hover:bg-white hover:text-petrol focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+        Site
+      </a>
     </div>
   </header>
 
-  <section class="lp-hero">
-    <div class="container">
-      <span class="lp-badge">Empresas &amp; comércio</span>
-      <h1>Fachada e ambiente que passam confiança ao cliente</h1>
-      <p class="lead">Pintura para lojas, escritórios e galpões — acabamento profissional e prazo combinado.</p>
-      <a class="btn btn-primary" href="#orcamento">Solicitar orçamento comercial</a>
-    </div>
-  </section>
+  <main>
+    <section id="topo" class="blueprint-grid relative bg-petrol-deep pb-16 pt-28 md:pb-24 md:pt-36">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 md:px-8 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-7 lg:pt-6">
+          <p class="font-mono text-xs text-petrol-soft">Pintura comercial — Petrolina/PE · Juazeiro/BA</p>
+          <h1 class="mt-6 text-[2.5rem] font-bold leading-[1.02] tracking-[-0.03em] text-white sm:text-6xl lg:text-[4.25rem]">
+            Fachada e ambiente que passam confiança ao cliente
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
+            Pintura para lojas, escritórios e galpões — acabamento profissional e prazo combinado.
+          </p>
+          <ul class="mt-10 grid max-w-xl grid-cols-1 border-t border-white/10 sm:grid-cols-2">
+            <li class="flex items-center gap-3 border-b border-white/10 py-4 text-[15px] font-medium text-white sm:odd:pr-6">
+              <span class="h-1.5 w-1.5 shrink-0 bg-terracotta" aria-hidden="true"></span>
+              Visual alinhado à sua marca
+            </li>
+            <li class="flex items-center gap-3 border-b border-white/10 py-4 text-[15px] font-medium text-white sm:even:border-l sm:even:pl-6">
+              <span class="h-1.5 w-1.5 shrink-0 bg-terracotta" aria-hidden="true"></span>
+              Menos interrupção na operação
+            </li>
+            <li class="flex items-center gap-3 border-b border-white/10 py-4 text-[15px] font-medium text-white sm:odd:pr-6">
+              <span class="h-1.5 w-1.5 shrink-0 bg-terracotta" aria-hidden="true"></span>
+              Foco comercial
+            </li>
+            <li class="flex items-center gap-3 border-b border-white/10 py-4 text-[15px] font-medium text-white sm:even:border-l sm:even:pl-6">
+              <span class="h-1.5 w-1.5 shrink-0 bg-terracotta" aria-hidden="true"></span>
+              Orçamento sem compromisso
+            </li>
+          </ul>
+          <a href="#orcamento" class="mt-10 hidden items-center gap-2 border-b border-white/40 pb-1 text-sm font-medium text-white transition-colors hover:border-white lg:inline-flex">
+            Preencha o formulário ao lado — leva menos de 1 minuto
+          </a>
+        </div>
 
-  <main class="lp-main">
-    <div class="container lp-grid">
-      <div>
-        <ul class="lp-bullets">
-          <li>Visual alinhado à sua marca</li>
-          <li>Menos interrupção na operação</li>
-          <li>Foco comercial</li>
-          <li>Orçamento sem compromisso</li>
-        </ul>
-        <p class="lp-trust"><strong>Atendimento Petrolina/PE e Juazeiro/BA</strong> · CNPJ 22.426.463/0001-52</p>
+        <div class="lg:col-span-5">
+          <div id="orcamento" class="scroll-mt-6 bg-white text-ink shadow-[0_30px_60px_-20px_rgba(0,0,0,0.45)]">
+            <div class="flex items-center justify-between border-b border-ink/10 px-6 py-4">
+              <h2 class="text-base font-semibold tracking-tight">Orçamento comercial</h2>
+              <span class="font-mono text-[11px] text-ink/50">Resposta em até 1 dia útil</span>
+            </div>
+            <form data-lead-form
+                  data-subject="Lead LP Empresa — Arte &amp; Pintura"
+                  data-campaign="empresa"
+                  data-next="/obrigado.html"
+                  action="https://formsubmit.co/clebertsfigueiredo@gmail.com"
+                  method="POST"
+                  novalidate
+                  class="space-y-5 px-6 py-6">
+              <div>
+                <label for="nome" class="mb-2 block text-[13px] font-medium text-ink">Nome</label>
+                <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Seu nome e empresa"
+                  class="w-full border border-ink/15 bg-paper px-3.5 py-3 text-[15px] text-ink placeholder:text-ink/40 focus:border-petrol focus:bg-white focus:outline-none focus:ring-2 focus:ring-petrol/20">
+              </div>
+              <div>
+                <label for="telefone" class="mb-2 block text-[13px] font-medium text-ink">Telefone</label>
+                <input id="telefone" name="telefone" type="tel" autocomplete="tel" required placeholder="(87) 99999-0000"
+                  class="w-full border border-ink/15 bg-paper px-3.5 py-3 font-mono text-[15px] text-ink placeholder:text-ink/40 focus:border-petrol focus:bg-white focus:outline-none focus:ring-2 focus:ring-petrol/20">
+              </div>
+              <fieldset>
+                <legend class="mb-2 block text-[13px] font-medium text-ink">Cidade</legend>
+                <div class="grid grid-cols-2 gap-2" role="radiogroup">
+                  <label class="city-opt flex cursor-pointer items-center justify-center gap-2 border border-petrol bg-petrol px-3 py-3 text-sm font-medium text-white">
+                    <input type="radio" name="cidade" value="Petrolina/PE" checked class="sr-only">
+                    Petrolina/PE
+                  </label>
+                  <label class="city-opt flex cursor-pointer items-center justify-center gap-2 border border-ink/15 px-3 py-3 text-sm font-medium text-ink hover:border-ink/40">
+                    <input type="radio" name="cidade" value="Juazeiro/BA" class="sr-only">
+                    Juazeiro/BA
+                  </label>
+                </div>
+              </fieldset>
+              <div>
+                <label for="resumo" class="mb-2 block text-[13px] font-medium text-ink">Resumo do serviço</label>
+                <textarea id="resumo" name="resumo" rows="3" required placeholder="Ex.: loja no Centro, pintar fachada e salão"
+                  class="w-full resize-none border border-ink/15 bg-paper px-3.5 py-3 text-[15px] text-ink placeholder:text-ink/40 focus:border-petrol focus:bg-white focus:outline-none focus:ring-2 focus:ring-petrol/20"></textarea>
+              </div>
+              <button type="submit" class="group flex w-full items-center justify-center gap-2 bg-terracotta px-5 py-4 text-[15px] font-semibold text-white transition-colors hover:bg-terracotta-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-80">
+                Solicitar orçamento comercial
+                <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </button>
+              <p class="text-center font-mono text-[11px] text-ink/50">Sem compromisso · Seus dados não são compartilhados</p>
+              <p class="form-status text-center text-sm" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <form id="orcamento" class="form-card" data-lead-form
-            data-subject="Lead LP Empresa — Arte & Pintura"
-            data-campaign="empresa"
-            data-next="/obrigado.html"
-            action="https://formsubmit.co/clebertsfigueiredo@gmail.com"
-            method="POST"
-            novalidate>
-        <h2>Solicitar orçamento comercial</h2>
-        <p class="form-note">Respondemos por telefone o mais rápido possível.</p>
-        <div class="form-group">
-          <label for="nome">Nome</label>
-          <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Seu nome">
+    <section aria-label="Credenciais" class="border-y border-petrol-line bg-petrol">
+      <ul class="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-5">
+        <li class="border-petrol-line px-5 py-5 md:border-l-0 md:px-8 md:py-7">
+          <p class="font-mono text-[11px] text-petrol-soft">Empresa</p>
+          <p class="mt-1 text-base font-semibold tracking-tight text-white">CNPJ 22.426.463/0001-52</p>
+        </li>
+        <li class="border-l border-petrol-line px-5 py-5 md:px-8 md:py-7">
+          <p class="font-mono text-[11px] text-petrol-soft">Documentação</p>
+          <p class="mt-1 text-base font-semibold tracking-tight text-white">Nota fiscal</p>
+        </li>
+        <li class="border-t border-petrol-line px-5 py-5 md:border-l md:border-t-0 md:px-8 md:py-7">
+          <p class="font-mono text-[11px] text-petrol-soft">Atendimento</p>
+          <p class="mt-1 text-base font-semibold tracking-tight text-white">Petrolina/PE</p>
+        </li>
+        <li class="border-l border-t border-petrol-line px-5 py-5 md:border-t-0 md:px-8 md:py-7">
+          <p class="font-mono text-[11px] text-petrol-soft">Atendimento</p>
+          <p class="mt-1 text-base font-semibold tracking-tight text-white">Juazeiro/BA</p>
+        </li>
+        <li class="col-span-2 border-t border-petrol-line px-5 py-5 md:col-span-1 md:border-l md:border-t-0 md:px-8 md:py-7">
+          <p class="font-mono text-[11px] text-petrol-soft">Contrato</p>
+          <p class="mt-1 text-base font-semibold tracking-tight text-white">Prazo por escrito</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="bg-paper py-20 text-ink md:py-28" aria-labelledby="espacos-titulo">
+      <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="grid gap-6 border-b border-ink/10 pb-10 md:grid-cols-12 md:items-end">
+          <h2 id="espacos-titulo" class="text-3xl font-bold leading-[1.05] tracking-[-0.025em] text-petrol md:col-span-7 md:text-5xl">
+            Cada tipo de espaço comercial pede um método diferente.
+          </h2>
+          <p class="text-[17px] leading-relaxed text-ink/70 md:col-span-5">
+            Planejamos tinta, acabamento e horário de acordo com o fluxo do seu negócio — não o contrário.
+          </p>
         </div>
-        <div class="form-group">
-          <label for="telefone">Telefone</label>
-          <input id="telefone" name="telefone" type="tel" autocomplete="tel" required placeholder="(87) 99999-0000">
+        <div class="mt-10 grid gap-5 md:grid-cols-12 md:grid-rows-2">
+          <article class="group relative overflow-hidden bg-petrol md:col-span-5 md:row-span-2">
+            <img src="../../images/lp/empresa/loja.jpg" alt="Fachada de loja pintada em azul petróleo e branco" loading="lazy" class="aspect-[4/5] w-full object-cover md:aspect-auto md:h-full">
+            <div class="absolute inset-x-0 bottom-0 bg-petrol-deep/90 p-5 backdrop-blur-md md:p-6">
+              <p class="font-mono text-[11px] text-petrol-soft">Lojas</p>
+              <h3 class="mt-1.5 text-lg font-semibold leading-snug tracking-tight text-white md:text-xl">Fachadas que chamam o cliente para dentro</h3>
+              <p class="mt-1 text-sm leading-relaxed text-white/70">Cores da marca aplicadas com precisão, do letreiro à calçada.</p>
+            </div>
+          </article>
+          <article class="group relative overflow-hidden bg-petrol md:col-span-7">
+            <img src="../../images/lp/empresa/escritorio.jpg" alt="Escritório corporativo com paredes recém-pintadas" loading="lazy" class="aspect-[16/10] w-full object-cover">
+            <div class="absolute inset-x-0 bottom-0 bg-petrol-deep/90 p-5 backdrop-blur-md md:p-6">
+              <p class="font-mono text-[11px] text-petrol-soft">Escritórios</p>
+              <h3 class="mt-1.5 text-lg font-semibold leading-snug tracking-tight text-white md:text-xl">Ambientes que transmitem solidez</h3>
+              <p class="mt-1 text-sm leading-relaxed text-white/70">Pintura interna com baixo odor e execução por setores.</p>
+            </div>
+          </article>
+          <article class="group relative overflow-hidden bg-petrol md:col-span-7">
+            <img src="../../images/lp/empresa/galpao.jpg" alt="Interior de galpão industrial com pintura nova e piso demarcado" loading="lazy" class="aspect-[16/10] w-full object-cover">
+            <div class="absolute inset-x-0 bottom-0 bg-petrol-deep/90 p-5 backdrop-blur-md md:p-6">
+              <p class="font-mono text-[11px] text-petrol-soft">Galpões</p>
+              <h3 class="mt-1.5 text-lg font-semibold leading-snug tracking-tight text-white md:text-xl">Grandes áreas, cronograma controlado</h3>
+              <p class="mt-1 text-sm leading-relaxed text-white/70">Paredes, estruturas e demarcação de piso sem parar a logística.</p>
+            </div>
+          </article>
         </div>
-        <div class="form-group">
-          <label for="cidade">Cidade</label>
-          <select id="cidade" class="form-select" name="cidade" required>
-            <option value="Petrolina/PE" selected>Petrolina/PE</option>
-            <option value="Juazeiro/BA">Juazeiro/BA</option>
-          </select>
+      </div>
+    </section>
+
+    <section class="bg-petrol text-white" aria-labelledby="processo-titulo">
+      <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
+        <div class="relative min-h-[320px] lg:min-h-full">
+          <img src="../../images/lp/empresa/processo.jpg" alt="Pintor aplicando tinta com rolo em parede comercial" loading="lazy" class="absolute inset-0 h-full w-full object-cover">
+          <div class="absolute bottom-0 left-0 bg-white px-5 py-4 text-ink md:px-6">
+            <p class="font-mono text-[11px] text-ink/50">Compromisso</p>
+            <p class="mt-0.5 text-base font-semibold tracking-tight text-petrol">Seu negócio continua aberto</p>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="resumo">Resumo do que precisa</label>
-          <textarea id="resumo" name="resumo" required placeholder="Ex.: loja no Centro, pintar fachada e salão"></textarea>
+        <div class="px-5 py-20 md:px-12 md:py-28">
+          <h2 id="processo-titulo" class="text-3xl font-bold leading-[1.05] tracking-[-0.025em] md:text-5xl">
+            Menos interrupção na operação.
+          </h2>
+          <p class="mt-5 max-w-md text-[17px] leading-relaxed text-white/70">
+            Um processo de obra pensado para quem não pode fechar as portas.
+          </p>
+          <ol class="mt-12 border-l border-petrol-line">
+            <li class="relative pb-9 pl-8">
+              <span class="absolute -left-[13px] top-0 flex h-[26px] w-[26px] items-center justify-center border border-petrol-line bg-petrol font-mono text-[11px] text-petrol-soft" aria-hidden="true">1</span>
+              <h3 class="text-lg font-semibold tracking-tight">Visita técnica</h3>
+              <p class="mt-1 max-w-md text-[15px] leading-relaxed text-white/65">Avaliamos o espaço, as superfícies e a rotina do seu negócio.</p>
+            </li>
+            <li class="relative pb-9 pl-8">
+              <span class="absolute -left-[13px] top-0 flex h-[26px] w-[26px] items-center justify-center border border-petrol-line bg-petrol font-mono text-[11px] text-petrol-soft" aria-hidden="true">2</span>
+              <h3 class="text-lg font-semibold tracking-tight">Orçamento detalhado</h3>
+              <p class="mt-1 max-w-md text-[15px] leading-relaxed text-white/65">Materiais, etapas e valores descritos item a item, sem surpresa.</p>
+            </li>
+            <li class="relative pb-9 pl-8">
+              <span class="absolute -left-[13px] top-0 flex h-[26px] w-[26px] items-center justify-center border border-petrol-line bg-petrol font-mono text-[11px] text-petrol-soft" aria-hidden="true">3</span>
+              <h3 class="text-lg font-semibold tracking-tight">Cronograma combinado</h3>
+              <p class="mt-1 max-w-md text-[15px] leading-relaxed text-white/65">Definimos horários que respeitam seu atendimento — inclusive à noite ou fim de semana.</p>
+            </li>
+            <li class="relative pb-9 pl-8">
+              <span class="absolute -left-[13px] top-0 flex h-[26px] w-[26px] items-center justify-center border border-petrol-line bg-petrol font-mono text-[11px] text-petrol-soft" aria-hidden="true">4</span>
+              <h3 class="text-lg font-semibold tracking-tight">Execução por etapas</h3>
+              <p class="mt-1 max-w-md text-[15px] leading-relaxed text-white/65">Áreas isoladas, proteção de mobiliário e limpeza ao fim de cada turno.</p>
+            </li>
+            <li class="relative pl-8">
+              <span class="absolute -left-[13px] top-0 flex h-[26px] w-[26px] items-center justify-center border border-petrol-line bg-petrol font-mono text-[11px] text-petrol-soft" aria-hidden="true">5</span>
+              <h3 class="text-lg font-semibold tracking-tight">Entrega e vistoria</h3>
+              <p class="mt-1 max-w-md text-[15px] leading-relaxed text-white/65">Conferimos o acabamento junto com você antes de encerrar a obra.</p>
+            </li>
+          </ol>
         </div>
-        <div class="form-actions">
-          <button class="btn btn-primary" type="submit">Solicitar orçamento comercial</button>
+      </div>
+    </section>
+
+    <section class="blueprint-grid bg-petrol-deep py-20 text-white md:py-28">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 md:px-8 lg:grid-cols-12 lg:items-end">
+        <h2 class="text-3xl font-bold leading-[1.05] tracking-[-0.025em] md:text-5xl lg:col-span-8">
+          Seu espaço é a primeira impressão da sua marca. Vamos cuidar dela.
+        </h2>
+        <div class="lg:col-span-4 lg:justify-self-end">
+          <a href="#orcamento" class="inline-flex w-full items-center justify-center gap-2 bg-terracotta px-6 py-4 text-[15px] font-semibold text-white transition-colors hover:bg-terracotta-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 focus-visible:ring-offset-petrol-deep sm:w-auto">
+            Solicitar orçamento comercial
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          </a>
+          <p class="mt-3 font-mono text-[11px] text-petrol-soft">Visita técnica sem custo em Petrolina e Juazeiro</p>
         </div>
-        <p class="form-hint">Seu pedido chega por e-mail. Não publicamos WhatsApp nem redes neste site.</p>
-        <p class="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="lp-footer">
-    <div class="container">
-      <strong>Arte & Pintura</strong> · Pintura comercial · CNPJ 22.426.463/0001-52
+  <footer class="border-t border-petrol-line bg-petrol-deep">
+    <div class="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-8 font-mono text-[11px] text-petrol-soft md:flex-row md:items-center md:justify-between md:px-8">
+      <p>Arte &amp; Pintura · Pintura comercial e residencial · CNPJ 22.426.463/0001-52</p>
+      <p>Petrolina/PE · Juazeiro/BA · © 2026</p>
     </div>
   </footer>
-  <script src="../../js/main.js?v=3"></script>
+
+  <script src="../../js/main.js?v=4"></script>
+  <script>
+    (function () {
+      document.querySelectorAll('.city-opt').forEach(function (label) {
+        label.addEventListener('click', function () {
+          document.querySelectorAll('.city-opt').forEach(function (l) {
+            l.classList.remove('border-petrol', 'bg-petrol', 'text-white');
+            l.classList.add('border-ink/15', 'text-ink');
+          });
+          label.classList.remove('border-ink/15', 'text-ink');
+          label.classList.add('border-petrol', 'bg-petrol', 'text-white');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

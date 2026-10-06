@@ -4,101 +4,346 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pintura de fachada e exterior em Petrolina e Juazeiro | Arte & Pintura</title>
-  <meta name="description" content="Sol forte desgasta a fachada. Pintura de exteriores com visual limpo e proteção em Petrolina e Juazeiro.">
+  <meta name="description" content="Sol forte desgasta a fachada. Pintura de exteriores com visual limpo e proteção em Petrolina e Juazeiro. Orçamento sem compromisso.">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="theme-color" content="#8b3a12">
+  <meta name="theme-color" content="#10283A">
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../css/styles.css?v=4">
-  <link rel="stylesheet" href="../../css/lp.css?v=1">
-  <meta property="og:title" content="Sol forte desgasta a fachada | Arte & Pintura">
-  <meta property="og:description" content="Pintura de fachadas e exteriores com proteção — Petrolina e Juazeiro.">
+  <meta property="og:title" content="Sol forte desgasta a fachada. Proteja antes de piorar. | Arte & Pintura">
+  <meta property="og:description" content="Pintura de fachadas e exteriores — Petrolina e Juazeiro.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://arteepinturapetrolina.com.br/lp/fachada/">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:image" content="https://arteepinturapetrolina.com.br/images/logo.jpg">
-  <!-- Google Analytics: descomente e troque G-XXXXXXXXXX pelo ID real
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
--->
+  <meta property="og:image" content="https://arteepinturapetrolina.com.br/images/lp/fachada/hero.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1B3A4B', deep: '#10283A' },
+            terra: { DEFAULT: '#C45C26', dark: '#A94B1C' },
+            sun: { DEFAULT: '#F08A24', light: '#FFC24A' },
+            sand: '#F7F5F2',
+            ink: '#2C2C2C',
+          },
+          fontFamily: {
+            display: ['Archivo', 'Inter', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: Archivo, Inter, sans-serif; font-stretch: 72%; }
+    .text-sun-gradient {
+      background: linear-gradient(90deg, #ffc24a 0%, #f08a24 45%, #e0692c 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .sun-disc {
+      border-radius: 9999px;
+      background: linear-gradient(180deg, #ffc24a 0%, #f08a24 55%, #c45c26 100%);
+      -webkit-mask-image: linear-gradient(to bottom,#000 54%,transparent 54%,transparent 59%,#000 59%,#000 69%,transparent 69%,transparent 74%,#000 74%,#000 82%,transparent 82%,transparent 88%,#000 88%);
+      mask-image: linear-gradient(to bottom,#000 54%,transparent 54%,transparent 59%,#000 59%,#000 69%,transparent 69%,transparent 74%,#000 74%,#000 82%,transparent 82%,transparent 88%,#000 88%);
+    }
+    @keyframes heat-drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .heat-line { animation: heat-drift 7s linear infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .heat-line { animation: none; }
+    }
+  
+    .form-status { display: none; margin-top: 0.75rem; font-size: 0.9rem; }
+    .form-status.is-visible { display: block; }
+    .form-status.is-error { color: #a33; }
+    .form-status.is-ok { color: #1a6b3c; }
+  </style>
 </head>
-<body class="lp lp-fachada">
-  <header class="lp-header">
-    <div class="container lp-header-inner">
-      <a class="logo-link" href="/" aria-label="Arte & Pintura — início">
-        <img src="../../images/logo.jpg" alt="Arte & Pintura" width="220" height="48">
+<body class="min-h-full w-full bg-navy-deep font-sans">
+  <header class="absolute inset-x-0 top-0 z-30">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
+      <a href="/" aria-label="Arte & Pintura — início" class="inline-flex items-center gap-2.5 text-sand drop-shadow-[0_1px_8px_rgba(16,40,58,0.45)]">
+        <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+          <defs><clipPath id="logo-clip"><rect width="32" height="32" rx="7"/></clipPath></defs>
+          <g clip-path="url(#logo-clip)">
+            <rect width="32" height="32" fill="#C45C26"/>
+            <path d="M0 32 L32 4 L32 32 Z" fill="#F08A24"/>
+            <circle cx="11" cy="11" r="5" fill="#F7F5F2"/>
+          </g>
+        </svg>
+        <span class="font-display text-xl font-extrabold uppercase tracking-tight">Arte <span class="text-sun">&amp;</span> Pintura</span>
       </a>
-      <a class="lp-site-link" href="/">Site</a>
+      <a href="/" class="inline-flex items-center gap-1.5 rounded-full border border-sand/30 bg-navy-deep/60 px-4 py-2 text-sm font-semibold text-sand backdrop-blur transition-colors hover:border-sun hover:text-sun focus:outline-none focus-visible:ring-2 focus-visible:ring-sun">
+        Site
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
     </div>
   </header>
 
-  <section class="lp-hero">
-    <div class="container">
-      <span class="lp-badge">Fachada &amp; exterior</span>
-      <h1>Sol forte desgasta a fachada. Proteja antes de piorar.</h1>
-      <p class="lead">Pintura de fachadas e exteriores com visual limpo e proteção — Petrolina e Juazeiro.</p>
-      <a class="btn btn-primary" href="#orcamento">Orçar pintura de fachada</a>
-    </div>
-  </section>
-
-  <main class="lp-main">
-    <div class="container lp-grid">
-      <div>
-        <ul class="lp-bullets">
-          <li>Proteção contra sol e desgaste</li>
-          <li>Fachada com aspecto cuidado</li>
-          <li>Residencial ou comercial</li>
-          <li>Orçamento sem compromisso</li>
-        </ul>
-        <p class="lp-trust"><strong>Empresa local</strong> · CNPJ 22.426.463/0001-52</p>
+  <main>
+    <section aria-labelledby="hero-title" class="relative overflow-hidden bg-navy-deep text-sand">
+      <div class="relative h-[58vh] max-h-[560px] min-h-[360px] lg:absolute lg:inset-y-0 lg:left-0 lg:h-auto lg:max-h-none lg:w-[54%]">
+        <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-br from-sun-light via-sun to-terra [clip-path:polygon(0_0,100%_0,100%_90%,0_100%)] lg:[clip-path:polygon(0_0,100%_0,80%_100%,0_100%)]"></div>
+        <div class="absolute inset-0 overflow-hidden [clip-path:polygon(0_0,100%_0,100%_84%,0_95%)] lg:[clip-path:polygon(0_0,95%_0,75%_100%,0_100%)]">
+          <img src="../../images/lp/fachada/hero.jpg" alt="Fachada de casa recém-pintada em branco e terracota sob sol forte no Sertão" class="h-full w-full object-cover object-[50%_60%]">
+          <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-navy-deep/50 via-transparent to-navy-deep/30"></div>
+          <div aria-hidden="true" class="absolute right-[12%] top-[16%] lg:right-[34%] lg:top-[13%]">
+            <div class="sun-disc h-20 w-20 sm:h-24 sm:w-24 lg:h-32 lg:w-32"></div>
+            <div class="mt-3 w-32 overflow-hidden sm:w-40 lg:w-52" aria-hidden="true">
+              <svg viewBox="0 0 800 12" preserveAspectRatio="none" class="heat-line block h-2.5 w-[200%]" style="opacity:0.55"><path d="M0 6 Q10 0 20 6 T40 6 T60 6 T80 6 T100 6 T120 6 T140 6 T160 6 T180 6 T200 6 T220 6 T240 6 T260 6 T280 6 T300 6 T320 6 T340 6 T360 6 T380 6 T400 6 T420 6 T440 6 T460 6 T480 6 T500 6 T520 6 T540 6 T560 6 T580 6 T600 6 T620 6 T640 6 T660 6 T680 6 T700 6 T720 6 T740 6 T760 6 T780 6 T800 6" fill="none" stroke="#F7F5F2" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 800 12" preserveAspectRatio="none" class="heat-line mt-1.5 block h-2.5 w-[200%]" style="animation-duration:8.5s;opacity:0.43"><path d="M0 6 Q10 0 20 6 T40 6 T60 6 T80 6 T100 6 T120 6 T140 6 T160 6 T180 6 T200 6 T220 6 T240 6 T260 6 T280 6 T300 6 T320 6 T340 6 T360 6 T380 6 T400 6 T420 6 T440 6 T460 6 T480 6 T500 6 T520 6 T540 6 T560 6 T580 6 T600 6 T620 6 T640 6 T660 6 T680 6 T700 6 T720 6 T740 6 T760 6 T780 6 T800 6" fill="none" stroke="#F7F5F2" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 800 12" preserveAspectRatio="none" class="heat-line mt-1.5 block h-2.5 w-[200%]" style="animation-duration:11s;opacity:0.31"><path d="M0 6 Q10 0 20 6 T40 6 T60 6 T80 6 T100 6 T120 6 T140 6 T160 6 T180 6 T200 6 T220 6 T240 6 T260 6 T280 6 T300 6 T320 6 T340 6 T360 6 T380 6 T400 6 T420 6 T440 6 T460 6 T480 6 T500 6 T520 6 T540 6 T560 6 T580 6 T600 6 T620 6 T640 6 T660 6 T680 6 T700 6 T720 6 T740 6 T760 6 T780 6 T800 6" fill="none" stroke="#F7F5F2" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <form id="orcamento" class="form-card" data-lead-form
-            data-subject="Lead LP Fachada — Arte & Pintura"
-            data-campaign="fachada"
-            data-next="/obrigado.html"
-            action="https://formsubmit.co/clebertsfigueiredo@gmail.com"
-            method="POST"
-            novalidate>
-        <h2>Orçar pintura de fachada</h2>
-        <p class="form-note">Respondemos por telefone o mais rápido possível.</p>
-        <div class="form-group">
-          <label for="nome">Nome</label>
-          <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Seu nome">
+      <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:grid lg:min-h-screen lg:grid-cols-2">
+        <div class="relative -mt-6 pb-16 sm:-mt-10 lg:col-start-2 lg:mt-0 lg:pb-24 lg:pl-8 lg:pt-32 xl:pl-14">
+          <p class="inline-flex items-center gap-2 text-sm font-semibold text-sun">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Petrolina/PE · Juazeiro/BA
+          </p>
+          <h1 id="hero-title" class="mt-4 font-display text-[44px] font-black uppercase leading-[0.9] tracking-tight sm:text-6xl lg:text-[64px] xl:text-[76px]">
+            Sol forte desgasta a fachada.
+            <span class="text-sun-gradient">Proteja antes de piorar.</span>
+          </h1>
+          <p class="mt-5 max-w-lg text-lg leading-relaxed text-sand/80">
+            Pintura de fachadas e exteriores com visual limpo e proteção — Petrolina e Juazeiro.
+          </p>
+          <ul class="mt-7 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+            <li class="flex items-center gap-3 text-[15px] font-medium text-sand">
+              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-terra">
+                <svg class="h-3.5 w-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Proteção contra sol e desgaste
+            </li>
+            <li class="flex items-center gap-3 text-[15px] font-medium text-sand">
+              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-terra">
+                <svg class="h-3.5 w-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Fachada com aspecto cuidado
+            </li>
+            <li class="flex items-center gap-3 text-[15px] font-medium text-sand">
+              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-terra">
+                <svg class="h-3.5 w-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Residencial ou comercial
+            </li>
+            <li class="flex items-center gap-3 text-[15px] font-medium text-sand">
+              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-terra">
+                <svg class="h-3.5 w-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>
+              </span>
+              Orçamento sem compromisso
+            </li>
+          </ul>
+
+          <div id="orcamento" class="mt-10 scroll-mt-6">
+            <div class="relative overflow-hidden rounded-3xl bg-sand p-6 text-ink shadow-[0_30px_80px_-20px_rgba(0,0,0,0.55)] sm:p-8">
+              <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-sun-light via-sun to-terra"></div>
+              <form data-lead-form
+                    data-subject="Lead LP Fachada — Arte &amp; Pintura"
+                    data-campaign="fachada"
+                    data-next="/obrigado.html"
+                    action="https://formsubmit.co/clebertsfigueiredo@gmail.com"
+                    method="POST"
+                    novalidate
+                    aria-labelledby="quote-title">
+                <h2 id="quote-title" class="font-display text-[28px] font-extrabold uppercase leading-none text-navy">Orçamento da sua fachada</h2>
+                <p class="mt-2 text-sm text-ink/65">Sem compromisso. Retornamos pelo telefone informado.</p>
+                <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label for="nome" class="mb-1.5 block text-sm font-semibold text-navy">Nome</label>
+                    <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Seu nome"
+                      class="h-12 w-full rounded-xl border border-ink/15 bg-white px-4 text-[15px] text-ink placeholder:text-ink/40 focus:border-terra focus:outline-none focus:ring-4 focus:ring-terra/20">
+                  </div>
+                  <div>
+                    <label for="telefone" class="mb-1.5 block text-sm font-semibold text-navy">Telefone</label>
+                    <input id="telefone" name="telefone" type="tel" autocomplete="tel" required placeholder="(87) 99999-0000"
+                      class="h-12 w-full rounded-xl border border-ink/15 bg-white px-4 text-[15px] text-ink placeholder:text-ink/40 focus:border-terra focus:outline-none focus:ring-4 focus:ring-terra/20">
+                  </div>
+                </div>
+                <fieldset class="mt-4">
+                  <legend class="mb-1.5 block text-sm font-semibold text-navy">Cidade</legend>
+                  <div class="grid grid-cols-2 gap-2">
+                    <label class="city-opt flex h-12 cursor-pointer items-center justify-center rounded-xl border border-navy bg-navy text-[15px] font-semibold text-sand">
+                      <input type="radio" name="cidade" value="Petrolina/PE" checked class="sr-only">
+                      Petrolina/PE
+                    </label>
+                    <label class="city-opt flex h-12 cursor-pointer items-center justify-center rounded-xl border border-ink/15 bg-white text-[15px] font-semibold text-ink hover:border-ink/30">
+                      <input type="radio" name="cidade" value="Juazeiro/BA" class="sr-only">
+                      Juazeiro/BA
+                    </label>
+                  </div>
+                </fieldset>
+                <div class="mt-4">
+                  <label for="resumo" class="mb-1.5 block text-sm font-semibold text-navy">Resumo do que precisa</label>
+                  <textarea id="resumo" name="resumo" rows="3" required placeholder="Ex.: fachada de casa em Petrolina, ~80 m²"
+                    class="w-full resize-none rounded-xl border border-ink/15 bg-white px-4 py-3 text-[15px] leading-relaxed text-ink placeholder:text-ink/40 focus:border-terra focus:outline-none focus:ring-4 focus:ring-terra/20"></textarea>
+                </div>
+                <button type="submit" class="group mt-6 flex h-14 w-full items-center justify-center gap-2.5 rounded-xl bg-terra font-display text-lg font-extrabold uppercase tracking-wide text-white transition-colors hover:bg-terra-dark focus:outline-none focus-visible:ring-4 focus-visible:ring-terra/30 disabled:cursor-wait disabled:opacity-80">
+                  Orçar pintura de fachada
+                  <svg class="h-5 w-5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </button>
+                <p class="form-status mt-3 text-center text-sm" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="telefone">Telefone</label>
-          <input id="telefone" name="telefone" type="tel" autocomplete="tel" required placeholder="(87) 99999-0000">
+      </div>
+    </section>
+
+    <section aria-labelledby="wear-title" class="bg-sand py-20 text-ink lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          <div class="lg:col-span-5">
+            <h2 id="wear-title" class="font-display text-[40px] font-black uppercase leading-[0.92] tracking-tight text-navy sm:text-5xl lg:text-6xl">
+              O sol do Sertão não dá trégua para a sua parede.
+            </h2>
+            <p class="mt-6 max-w-md text-lg leading-relaxed text-ink/75">
+              Radiação e calor intenso todos os dias ressecam a tinta. O desgaste começa discreto e, se ninguém age, vira reparo de reboco.
+            </p>
+            <p class="mt-6 border-l-4 border-terra pl-4 font-display text-2xl font-extrabold uppercase leading-tight text-terra">
+              Quanto antes você repinta, menor o custo da obra.
+            </p>
+          </div>
+          <div class="relative lg:col-span-7">
+            <div aria-hidden="true" class="absolute -bottom-4 -right-4 h-full w-full bg-terra [clip-path:polygon(12%_0,100%_0,100%_100%,0_100%)]"></div>
+            <img src="../../images/lp/fachada/wear.jpg" alt="Parede com pintura desbotada, rachada e descascando pela ação do sol" class="relative aspect-[4/3] w-full object-cover [clip-path:polygon(12%_0,100%_0,100%_100%,0_100%)]">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="cidade">Cidade</label>
-          <select id="cidade" class="form-select" name="cidade" required>
-            <option value="Petrolina/PE" selected>Petrolina/PE</option>
-            <option value="Juazeiro/BA">Juazeiro/BA</option>
-          </select>
+        <div class="mt-20">
+          <h3 class="font-display text-2xl font-extrabold uppercase text-navy">Do desbotamento ao descascamento</h3>
+          <ol class="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+            <li class="flex flex-col">
+              <span aria-hidden="true" class="block h-2 w-full" style="background-color:#FFC24A"></span>
+              <span class="mt-4 text-xs font-semibold uppercase tracking-wider text-ink/55">Estágio 1</span>
+              <span class="mt-1 font-display text-2xl font-extrabold uppercase text-navy">Desbotamento</span>
+              <p class="mt-2 text-[15px] leading-relaxed text-ink/75">A cor perde força e a fachada fica com aparência cansada.</p>
+            </li>
+            <li class="flex flex-col">
+              <span aria-hidden="true" class="block h-2 w-full" style="background-color:#F08A24"></span>
+              <span class="mt-4 text-xs font-semibold uppercase tracking-wider text-ink/55">Estágio 2</span>
+              <span class="mt-1 font-display text-2xl font-extrabold uppercase text-navy">Calcinação</span>
+              <p class="mt-2 text-[15px] leading-relaxed text-ink/75">A tinta resseca e solta pó ao passar a mão na parede.</p>
+            </li>
+            <li class="flex flex-col">
+              <span aria-hidden="true" class="block h-2 w-full" style="background-color:#D9702E"></span>
+              <span class="mt-4 text-xs font-semibold uppercase tracking-wider text-ink/55">Estágio 3</span>
+              <span class="mt-1 font-display text-2xl font-extrabold uppercase text-navy">Fissuras</span>
+              <p class="mt-2 text-[15px] leading-relaxed text-ink/75">O calor abre trincas finas por onde entram água e sujeira.</p>
+            </li>
+            <li class="flex flex-col">
+              <span aria-hidden="true" class="block h-2 w-full" style="background-color:#C45C26"></span>
+              <span class="mt-4 text-xs font-semibold uppercase tracking-wider text-ink/55">Estágio 4</span>
+              <span class="mt-1 font-display text-2xl font-extrabold uppercase text-navy">Descascamento</span>
+              <p class="mt-2 text-[15px] leading-relaxed text-ink/75">A pintura se solta e o reboco fica exposto. O reparo encarece.</p>
+            </li>
+          </ol>
+          <p class="mt-10 max-w-2xl text-[15px] text-ink/70">
+            A pintura preventiva atua nos estágios 1 e 2 — antes que a fachada precise de reparo estrutural.
+          </p>
         </div>
-        <div class="form-group">
-          <label for="resumo">Resumo do que precisa</label>
-          <textarea id="resumo" name="resumo" required placeholder="Ex.: fachada de casa em Petrolina, ~80 m²"></textarea>
+      </div>
+    </section>
+
+    <section aria-labelledby="process-title" class="relative overflow-hidden bg-navy py-20 text-sand lg:py-28">
+      <div aria-hidden="true" class="absolute -right-24 top-0 h-full w-1/3 bg-navy-deep [clip-path:polygon(40%_0,100%_0,100%_100%,0_100%)]"></div>
+      <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+        <h2 id="process-title" class="max-w-2xl font-display text-[40px] font-black uppercase leading-[0.92] tracking-tight sm:text-5xl">
+          Da parede castigada à fachada protegida.
+        </h2>
+        <p class="mt-5 max-w-xl text-lg text-sand/75">Para casas, lojas, prédios e galpões.</p>
+        <ol class="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+          <li class="relative flex flex-col">
+            <div class="flex items-center gap-4">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center bg-sun font-display text-2xl font-black text-navy-deep [clip-path:polygon(0_0,100%_0,100%_75%,75%_100%,0_100%)]">1</span>
+              <span aria-hidden="true" class="hidden h-px flex-1 bg-sand/25 md:block"></span>
+            </div>
+            <h3 class="mt-6 font-display text-2xl font-extrabold uppercase">Você pede o orçamento</h3>
+            <p class="mt-2 max-w-sm text-[15px] leading-relaxed text-sand/75">Preencha o formulário com um resumo da sua fachada. Sem compromisso.</p>
+          </li>
+          <li class="relative flex flex-col">
+            <div class="flex items-center gap-4">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center bg-sun font-display text-2xl font-black text-navy-deep [clip-path:polygon(0_0,100%_0,100%_75%,75%_100%,0_100%)]">2</span>
+              <span aria-hidden="true" class="hidden h-px flex-1 bg-sand/25 md:block"></span>
+            </div>
+            <h3 class="mt-6 font-display text-2xl font-extrabold uppercase">Visita e avaliação</h3>
+            <p class="mt-2 max-w-sm text-[15px] leading-relaxed text-sand/75">Avaliamos a parede, medimos a área e indicamos o sistema de pintura certo para o sol forte.</p>
+          </li>
+          <li class="relative flex flex-col">
+            <div class="flex items-center gap-4">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center bg-sun font-display text-2xl font-black text-navy-deep [clip-path:polygon(0_0,100%_0,100%_75%,75%_100%,0_100%)]">3</span>
+            </div>
+            <h3 class="mt-6 font-display text-2xl font-extrabold uppercase">Preparação e pintura</h3>
+            <p class="mt-2 max-w-sm text-[15px] leading-relaxed text-sand/75">Limpeza, correção de fissuras e tinta para exteriores, com acabamento limpo e obra organizada.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section aria-labelledby="final-cta-title" class="relative overflow-hidden bg-gradient-to-r from-terra via-sun to-sun-light">
+      <div aria-hidden="true" class="absolute inset-y-0 right-0 w-2/5 bg-navy-deep/15 [clip-path:polygon(35%_0,100%_0,100%_100%,0_100%)]"></div>
+      <div class="relative mx-auto flex max-w-7xl flex-col items-start gap-8 px-5 py-16 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:py-20">
+        <div>
+          <div class="mb-5 w-40 overflow-hidden" aria-hidden="true">
+            <svg viewBox="0 0 800 12" preserveAspectRatio="none" class="heat-line block h-2.5 w-[200%]"><path d="M0 6 Q10 0 20 6 T40 6 T60 6 T80 6 T100 6 T120 6 T140 6 T160 6 T180 6 T200 6 T220 6 T240 6 T260 6 T280 6 T300 6 T320 6 T340 6 T360 6 T380 6 T400 6 T420 6 T440 6 T460 6 T480 6 T500 6 T520 6 T540 6 T560 6 T580 6 T600 6 T620 6 T640 6 T660 6 T680 6 T700 6 T720 6 T740 6 T760 6 T780 6 T800 6" fill="none" stroke="#10283A" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 800 12" preserveAspectRatio="none" class="heat-line mt-1.5 block h-2.5 w-[200%]" style="animation-duration:9s"><path d="M0 6 Q10 0 20 6 T40 6 T60 6 T80 6 T100 6 T120 6 T140 6 T160 6 T180 6 T200 6 T220 6 T240 6 T260 6 T280 6 T300 6 T320 6 T340 6 T360 6 T380 6 T400 6 T420 6 T440 6 T460 6 T480 6 T500 6 T520 6 T540 6 T560 6 T580 6 T600 6 T620 6 T640 6 T660 6 T680 6 T700 6 T720 6 T740 6 T760 6 T780 6 T800 6" fill="none" stroke="#10283A" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h2 id="final-cta-title" class="max-w-2xl font-display text-[40px] font-black uppercase leading-[0.92] tracking-tight text-navy-deep sm:text-5xl lg:text-6xl">
+            Cada dia de sol conta. Proteja sua fachada agora.
+          </h2>
         </div>
-        <div class="form-actions">
-          <button class="btn btn-primary" type="submit">Orçar pintura de fachada</button>
-        </div>
-        <p class="form-hint">Seu pedido chega por e-mail. Não publicamos WhatsApp nem redes neste site.</p>
-        <p class="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
+        <a href="#orcamento" class="inline-flex h-14 shrink-0 items-center gap-2.5 rounded-xl bg-navy-deep px-7 font-display text-lg font-extrabold uppercase tracking-wide text-sand transition-colors hover:bg-navy focus:outline-none focus-visible:ring-4 focus-visible:ring-navy-deep/30">
+          Orçar pintura de fachada
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </a>
+      </div>
+    </section>
   </main>
 
-  <footer class="lp-footer">
-    <div class="container">
-      <strong>Arte & Pintura</strong> · CNPJ 22.426.463/0001-52 · Petrolina/PE e Juazeiro/BA
+  <footer class="bg-navy-deep text-sand">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-10 sm:px-8 md:flex-row md:items-center md:justify-between">
+      <div>
+        <span class="inline-flex items-center gap-2.5">
+          <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+            <defs><clipPath id="logo-clip-f"><rect width="32" height="32" rx="7"/></clipPath></defs>
+            <g clip-path="url(#logo-clip-f)">
+              <rect width="32" height="32" fill="#C45C26"/>
+              <path d="M0 32 L32 4 L32 32 Z" fill="#F08A24"/>
+              <circle cx="11" cy="11" r="5" fill="#F7F5F2"/>
+            </g>
+          </svg>
+          <span class="font-display text-xl font-extrabold uppercase tracking-tight">Arte <span class="text-sun">&amp;</span> Pintura</span>
+        </span>
+        <p class="mt-2 text-sm text-sand/65">Pintura residencial e comercial · Petrolina/PE e Juazeiro/BA · CNPJ 22.426.463/0001-52</p>
+      </div>
+      <div class="flex items-center gap-6 text-sm text-sand/65">
+        <a href="/" class="font-semibold text-sand transition-colors hover:text-sun">Site</a>
+        <span>© 2026 Arte &amp; Pintura</span>
+      </div>
     </div>
   </footer>
-  <script src="../../js/main.js?v=3"></script>
+
+  <script src="../../js/main.js?v=4"></script>
+  <script>
+    (function () {
+      document.querySelectorAll('.city-opt').forEach(function (label) {
+        label.addEventListener('click', function () {
+          document.querySelectorAll('.city-opt').forEach(function (l) {
+            l.classList.remove('border-navy', 'bg-navy', 'text-sand');
+            l.classList.add('border-ink/15', 'bg-white', 'text-ink');
+          });
+          label.classList.remove('border-ink/15', 'bg-white', 'text-ink');
+          label.classList.add('border-navy', 'bg-navy', 'text-sand');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

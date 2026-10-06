@@ -85,9 +85,9 @@ Paths no domínio apex (sem subdomínio `lp.`). Páginas com `noindex,nofollow` 
 
 | URL | Campanha |
 |-----|----------|
-| `/lp/natal/` | Natal / interiores |
-| `/lp/fachada/` | Fachada / sol |
-| `/lp/empresa/` | Comercial / B2B |
+| `/lp/natal/` | Natal / interiores (design Magic Patterns, Tailwind CDN) |
+| `/lp/fachada/` | Fachada / sol (design Magic Patterns, Tailwind CDN) |
+| `/lp/empresa/` | Comercial / B2B (design Magic Patterns, Tailwind CDN) |
 
 Header mínimo (logo + link Site). Formulário igual ao do site (FormSubmit).
 
