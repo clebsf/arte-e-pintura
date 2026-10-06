@@ -1,6 +1,7 @@
 # Arte & Pintura — produção no VPS Hostinger srv1496407 (Docker + Traefik)
 # Imagem: clebertsfigueiredo/arte-e-pintura:latest
 # Domínio: arteepinturapetrolina.com.br → A para 187.77.241.92
+# Sem www (Clebert não configura www) — ACME só no apex
 
 services:
   web:
@@ -12,7 +13,7 @@ services:
       - "80"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.artepintura.rule=Host(`arteepinturapetrolina.com.br`) || Host(`www.arteepinturapetrolina.com.br`)"
+      - "traefik.http.routers.artepintura.rule=Host(`arteepinturapetrolina.com.br`)"
       - "traefik.http.routers.artepintura.entrypoints=websecure"
       - "traefik.http.routers.artepintura.tls=true"
       - "traefik.http.routers.artepintura.tls.certresolver=letsencrypt"
