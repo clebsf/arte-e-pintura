@@ -113,3 +113,18 @@ Logo oficial: `images/logo.jpg` (wordmark + rolo).
 ## Sem backend
 
 O site é 100% estático (HTML/CSS/JS). Ideal para nginx em Docker. Não há WhatsApp, redes sociais nem telefone exibido — só formulário.
+
+## Docker Hub
+
+Imagem publicada:
+
+```bash
+docker pull clebertsfigueiredo/arte-e-pintura:latest
+docker run -d --name arte-pintura -p 80:80 --restart unless-stopped clebertsfigueiredo/arte-e-pintura:latest
+```
+
+Tags: `latest`, `1.0.0`  
+Hub: https://hub.docker.com/r/clebertsfigueiredo/arte-e-pintura
+
+Repositório: https://github.com/clebsf/arte-e-pintura
+
