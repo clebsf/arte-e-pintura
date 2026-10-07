@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://arteepinturapetrolina.com.br/juazeiro.html">
   <meta name="theme-color" content="#1B3A4B">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="stylesheet" href="css/styles.css?v=4">
   <meta property="og:title" content="Pintor e pintura em Juazeiro | Arte & Pintura">
   <meta property="og:description" content="Pintura residencial e comercial em Juazeiro/BA, com equipe a partir de Petrolina. Orçamento sem compromisso.">
   <meta property="og:type" content="website">
@@ -30,7 +30,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo-link" href="index.html" aria-label="Arte & Pintura — início">
-        <img src="images/logo.jpg" alt="Arte & Pintura" width="220" height="48">
+        <img src="images/logo.jpg" alt="Arte & Pintura" width="280" height="64">
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Principal">
@@ -45,18 +45,18 @@
     </div>
   </header>
   <main>
-    <section class="page-hero">
+    <section class="page-hero page-hero--left">
       <div class="container">
         <h1>Pintura em Juazeiro/BA</h1>
         <p>Atendimento a partir de Petrolina — mesma qualidade e prazo combinado.</p>
       </div>
     </section>
-    <section class="section">
+    <section class="section section-lg">
       <div class="container content-grid content-grid-2">
         <div class="prose">
-          <p>A Arte & Pintura atende <strong>Juazeiro/BA</strong> com pintura residencial, comercial, fachadas e interiores.</p>
+          <p>A Arte &amp; Pintura atende <strong>Juazeiro/BA</strong> com pintura residencial, comercial, fachadas e interiores.</p>
           <p>Base em Petrolina, deslocamento para Juazeiro com orçamento claro e prazo alinhado antes do início da obra.</p>
-          <h2 class="section-title" style="font-size:1.35rem;margin-top:1.5rem">Serviços em Juazeiro</h2>
+          <h2 class="section-title" style="font-size:1.35rem;margin-top:1.75rem">Serviços em Juazeiro</h2>
           <ul class="list-check">
             <li>Residências e apartamentos</li>
             <li>Empresas e espaços comerciais</li>
@@ -65,36 +65,36 @@
           </ul>
         </div>
         <div>
-        <form class="form-card" data-lead-form
+        <form class="form-card" data-lead-form data-next="https://arteepinturapetrolina.com.br/obrigado.html"
               action="https://formsubmit.co/clebertsfigueiredo@gmail.com"
               method="POST"
               novalidate>
-          <!-- Envio via FormSubmit para clebertsfigueiredo@gmail.com. Na primeira vez, confirme o e-mail que o FormSubmit envia. -->
+          <!-- Envio via FormSubmit (AJAX em js/main.js) para clebertsfigueiredo@gmail.com -->
           <h2>Peça seu orçamento</h2>
           <p class="form-note">Respondemos o mais rápido possível por telefone.</p>
           <div class="form-group">
-            <label for="nome">Nome</label>
-            <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Seu nome">
+            <label for="nome">Nome completo</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Como prefere ser chamado?">
           </div>
           <div class="form-group">
-            <label for="telefone">Telefone</label>
+            <label for="telefone">Telefone (com DDD)</label>
             <input id="telefone" name="telefone" type="tel" autocomplete="tel" required placeholder="(87) 99999-0000">
           </div>
-                    <div class="form-group">
+          <div class="form-group">
             <label for="cidade">Cidade</label>
             <select id="cidade" class="form-select" name="cidade" required>
-              <option value="Petrolina/PE" selected>Petrolina/PE</option>
-              <option value="Juazeiro/BA">Juazeiro/BA</option>
+              <option value="Petrolina/PE">Petrolina/PE</option>
+              <option value="Juazeiro/BA" selected>Juazeiro/BA</option>
             </select>
           </div>
-<div class="form-group">
+          <div class="form-group">
             <label for="resumo">Resumo do que precisa</label>
-            <textarea id="resumo" name="resumo" required placeholder="Ex.: pintura interna de 3 cômodos em Petrolina"></textarea>
+            <textarea id="resumo" name="resumo" required placeholder="Ex.: Pintura interna de um apartamento de 3 quartos, teto e paredes..."></textarea>
           </div>
           <div class="form-actions">
             <button class="btn btn-primary" type="submit">Enviar pedido</button>
           </div>
-          <p class="form-hint">Seu pedido chega por e-mail. Não publicamos WhatsApp nem redes neste site.</p>
+          <p class="form-hint">Seus dados estão seguros. Retornaremos via ligação ou e-mail. Não publicamos WhatsApp nem redes neste site.</p>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
         </div>
@@ -105,25 +105,29 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand">Arte & Pintura</div>
-          <p>Pintura residencial e comercial em Petrolina/PE e Juazeiro/BA.</p>
-          <p style="margin-top:0.5rem">CNPJ 22.426.463/0001-52</p>
+          <img class="footer-logo" src="images/logo.jpg" alt="Arte & Pintura" width="200" height="56">
+          <p>Serviços profissionais de pintura residencial e comercial com foco em acabamento premium e cumprimento de prazos.</p>
+          <div class="footer-meta">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg> CNPJ: 22.426.463/0001-52</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Atendimento em Petrolina/PE e Juazeiro/BA</span>
+          </div>
         </div>
         <div>
-          <h3>Páginas</h3>
+          <h3>Navegação</h3>
           <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="petrolina.html">Petrolina</a></li>
             <li><a href="juazeiro.html">Juazeiro</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
           </ul>
         </div>
         <div>
           <h3>Contato</h3>
           <ul class="footer-links">
-            <li><a href="contato.html">Solicitar orçamento</a></li>
+            <li><a class="footer-cta" href="contato.html">Solicitar orçamento online</a></li>
           </ul>
-          <p style="margin-top:0.75rem">Empresa de Petrolina · Atendimento Petrolina/PE e Juazeiro/BA</p>
+          <p class="footer-note">Nossos orçamentos são realizados mediante agendamento prévio após preenchimento do formulário no site.</p>
         </div>
       </div>
       <div class="footer-bottom">

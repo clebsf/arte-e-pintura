@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://arteepinturapetrolina.com.br/sobre.html">
   <meta name="theme-color" content="#1B3A4B">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=4">
   <meta property="og:title" content="Sobre a Arte & Pintura | Petrolina">
   <meta property="og:description" content="Arte & Pintura é empresa de Petrolina. Adriano Medeiros no comando da obra — foco em prazo e acabamento limpo.">
   <meta property="og:type" content="website">
@@ -30,7 +30,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo-link" href="index.html" aria-label="Arte & Pintura — início">
-        <img src="images/logo.jpg" alt="Arte & Pintura" width="220" height="48">
+        <img src="images/logo.jpg" alt="Arte & Pintura" width="280" height="64">
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Principal">
@@ -45,19 +45,21 @@
     </div>
   </header>
   <main>
-    <section class="page-hero">
+    <section class="page-hero page-hero--gradient">
       <div class="container">
-        <h1>Sobre a Arte & Pintura</h1>
+        <h1>Sobre a Arte &amp; Pintura</h1>
         <p>Empresa de Petrolina. Trabalho sério, sem enrolação.</p>
       </div>
     </section>
-    <section class="section">
-      <div class="container prose">
-        <p>A <strong>Arte & Pintura</strong> nasceu em Petrolina para oferecer pintura residencial e comercial com acabamento limpo e prazo combinado.</p>
-        <p><strong>Adriano Medeiros</strong> está no comando da obra: organiza a equipe, acompanha o serviço e garante que o combinado seja cumprido.</p>
-        <p>Atendemos Petrolina/PE e Juazeiro/BA. Sem jargão, sem promessa vazia — orçamento claro e execução cuidadosa.</p>
-        <p>CNPJ 22.426.463/0001-52</p>
-        <p class="mt-2"><a class="btn btn-primary" href="contato.html">Solicitar orçamento</a></p>
+    <section class="section section-lg" style="background:var(--white)">
+      <div class="container">
+        <div class="prose prose-lg">
+          <p>A <strong>Arte &amp; Pintura</strong> nasceu em Petrolina para oferecer pintura residencial e comercial com acabamento limpo e prazo combinado.</p>
+          <p><strong>Adriano Medeiros</strong> está no comando da obra: organiza a equipe, acompanha o serviço e garante que o combinado seja cumprido.</p>
+          <p>Atendemos Petrolina/PE e Juazeiro/BA. Sem jargão, sem promessa vazia — orçamento claro e execução cuidadosa.</p>
+          <div class="cnpj-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> CNPJ 22.426.463/0001-52</div>
+          <p><a class="btn btn-primary btn-lg" href="contato.html">Solicitar orçamento</a></p>
+        </div>
       </div>
     </section>
   </main>
@@ -65,25 +67,29 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand">Arte & Pintura</div>
-          <p>Pintura residencial e comercial em Petrolina/PE e Juazeiro/BA.</p>
-          <p style="margin-top:0.5rem">CNPJ 22.426.463/0001-52</p>
+          <img class="footer-logo" src="images/logo.jpg" alt="Arte & Pintura" width="200" height="56">
+          <p>Serviços profissionais de pintura residencial e comercial com foco em acabamento premium e cumprimento de prazos.</p>
+          <div class="footer-meta">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg> CNPJ: 22.426.463/0001-52</span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Atendimento em Petrolina/PE e Juazeiro/BA</span>
+          </div>
         </div>
         <div>
-          <h3>Páginas</h3>
+          <h3>Navegação</h3>
           <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="petrolina.html">Petrolina</a></li>
             <li><a href="juazeiro.html">Juazeiro</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
           </ul>
         </div>
         <div>
           <h3>Contato</h3>
           <ul class="footer-links">
-            <li><a href="contato.html">Solicitar orçamento</a></li>
+            <li><a class="footer-cta" href="contato.html">Solicitar orçamento online</a></li>
           </ul>
-          <p style="margin-top:0.75rem">Empresa de Petrolina · Atendimento Petrolina/PE e Juazeiro/BA</p>
+          <p class="footer-note">Nossos orçamentos são realizados mediante agendamento prévio após preenchimento do formulário no site.</p>
         </div>
       </div>
       <div class="footer-bottom">
