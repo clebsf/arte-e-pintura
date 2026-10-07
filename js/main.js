@@ -164,7 +164,22 @@
           });
         })
         .then(function () {
-          window.location.href = nextUrl;
+          function goNext() {
+            window.location.href = nextUrl;
+          }
+          // GA4 conversion: lead form sent successfully
+          if (typeof window.gtag === "function") {
+            var params = {
+              method: "form",
+              city: cidade,
+              event_callback: goNext,
+              event_timeout: 2000,
+            };
+            if (campaign) params.campaign = campaign;
+            window.gtag("event", "generate_lead", params);
+          } else {
+            goNext();
+          }
         })
         .catch(function () {
           showStatus(
